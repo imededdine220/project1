@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PDF → Word Converter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+   <link rel="stylesheet" href="pr_css.css" />
+</head>
+<script src="pr.js"></script>
+<body>
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">PDF→Word</div>
+  <ul class="nav-links">
+    <li><a href="#converter">Convert</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#how">How it works</a></li>
+  </ul>
+  <button class="nav-btn" onclick="document.getElementById('converter').scrollIntoView({behavior:'smooth'})">Get Started</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge"><span></span> Free & Secure Conversion</div>
+  <h1>Convert <span class="grad">PDF</span> to<br/>Word Instantly</h1>
+  <p class="sub">Drop your PDF and get a perfectly formatted Word document in seconds — no sign-up, no watermarks, 100% private.</p>
+</section>
+
+<!-- DROP ZONE -->
+<section class="drop-section" id="converter">
+  <div class="drop-card" id="dropZone">
+    <div class="drop-icon">📄</div>
+    <h2>Drop your PDF here</h2>
+    <p>Drag & drop or click to select a PDF file to convert</p>
+    <button class="btn-primary" onclick="document.getElementById('fileInput').click()">
+      📂 Choose PDF File
+    </button>
+    <input type="file" id="fileInput" accept=".pdf"/>
+    <p class="formats">Supported: PDF (max 50 MB)</p>
+
+    <div id="filePreview">
+      <div class="file-row">
+        <div class="file-icon-box">📕</div>
+        <div class="file-info">
+          <div class="file-name" id="fileName">document.pdf</div>
+          <div class="file-size" id="fileSize">2.4 MB</div>
+        </div>
+        <button class="remove-btn" id="removeBtn" title="Remove">✕</button>
+      </div>
+    </div>
+
+    <div id="progressSection">
+      <div class="progress-label">
+        <span id="progressText">Converting…</span>
+        <span id="progressPct">0%</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <div id="doneSection">
+      <div class="done-row">
+        <span class="done-icon">✅</span>
+        <div>
+          <div class="done-text">Conversion complete!</div>
+          <div class="done-sub" id="doneFileName">document.docx is ready to download</div>
+        </div>
+      </div>
+      <button class="btn-download" id="downloadBtn">⬇️ Download .docx</button>
+    </div>
+
+    <div id="convertBtnWrap" style="display:none; margin-top:1.2rem;">
+      <button class="btn-primary" id="convertBtn">⚡ Convert to Word</button>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <h2 class="section-label">Why choose us?</h2>
+  <p class="section-sub">Everything you need for a smooth, accurate PDF-to-Word conversion experience.</p>
+  <div class="grid-3">
+    <div class="feat-card"><div class="feat-icon">⚡</div><h3>Lightning Fast</h3><p>Convert files in seconds, not minutes. Our engine processes documents at blazing speed.</p></div>
+    <div class="feat-card"><div class="feat-icon">🎯</div><h3>High Accuracy</h3><p>Preserves fonts, tables, images, headers and layout — your document comes out clean every time.</p></div>
+    <div class="feat-card"><div class="feat-icon">🔒</div><h3>100% Private</h3><p>Files are processed locally and never stored on any server. Your data stays yours.</p></div>
+    <div class="feat-card"><div class="feat-icon">🆓</div><h3>Always Free</h3><p>No subscriptions, no hidden fees. Convert as many files as you need, completely free.</p></div>
+    <div class="feat-card"><div class="feat-icon">🖼️</div><h3>Images Preserved</h3><p>All embedded images and graphics are retained and placed correctly in the output document.</p></div>
+    <div class="feat-card"><div class="feat-icon">📱</div><h3>Works Everywhere</h3><p>Use it on desktop, tablet, or mobile — no installation required, just open your browser.</p></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <h2 class="section-label" style="text-align:center;">How it works</h2>
+  <p class="section-sub">Three simple steps to get your Word document.</p>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><h4>Upload PDF</h4><p>Drag & drop or browse to select your PDF file from your device.</p></div>
+    <div class="step"><div class="step-num">2</div><h4>Convert</h4><p>Click Convert and our engine processes the file instantly.</p></div>
+    <div class="step"><div class="step-num">3</div><h4>Download</h4><p>Your .docx file is ready — download it with one click.</p></div>
+    <div class="step"><div class="step-num">4</div><h4>Edit Freely</h4><p>Open in Microsoft Word or Google Docs and edit as you wish.</p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 PDF→Word Converter · Made with ♥ · <a href="#">Privacy Policy</a> · <a href="#">Contact</a></p>
+</footer>
+
+</body>
+</html>
