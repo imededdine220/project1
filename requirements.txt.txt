@@ -1,0 +1,17 @@
+# ── Core framework ──
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9       # file uploads
+
+# ── Database ──
+sqlalchemy==2.0.30
+
+# ── PDF conversion (primary engine) ──
+pdf2docx==0.5.8               # high-fidelity PDF → DOCX
+
+# ── Fallback engine ──
+pdfminer.six==20221105         # text extraction
+python-docx==1.1.2             # DOCX generation
+
+# ── Utilities ──
+aiofiles==23.2.1
